@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             BackgroundColor="#121212"
+             NavigationPage.HasNavigationBar="False"
+             x:Class="Crypt.MainPage">
+
+    <ContentPage.Content>
+        <StackLayout Padding="20" VerticalOptions="Center">
+            <Label Text="Шифрування/Розшифрування файлів"
+               FontSize="Large"
+               TextColor="White"
+               HorizontalOptions="Center"
+               Margin="0, 20, 0, 20"/>
+            <Button Text="Вибрати файл"
+                BackgroundColor="#3B3B3B"
+                TextColor="White"
+                CornerRadius="5"
+                HeightRequest="50"
+                Margin="0,10,0,0"
+                Clicked="PickFileButton_Clicked"/>
+            <Label x:Name="fileNameLabel"
+               Text="Файл не вибрано"
+               TextColor="White"
+               HorizontalOptions="Center"
+               Margin="10"/>
+            <Entry x:Name="passwordEntry"
+               Placeholder="Введіть пароль"
+               IsPassword="True"
+               TextColor="White"
+               PlaceholderColor="Gray"
+               BackgroundColor="#1E1E1E"
+               Margin="0,10,0,0"/>
+            <Button Text="Шифрувати"
+                BackgroundColor="#3B3B3B"
+                TextColor="White"
+                CornerRadius="5"
+                HeightRequest="50"
+                Margin="0,10,0,0"
+                Clicked="EncryptFileButton_Clicked"/>
+            <Button Text="Розшифрувати"
+                BackgroundColor="#3B3B3B"
+                TextColor="White"
+                CornerRadius="5"
+                HeightRequest="50"
+                Margin="0,10,0,0"
+                Clicked="DecryptFileButton_Clicked"/>
+            <Label x:Name="statusLabel"
+               Text=""
+               TextColor="Green"
+               HorizontalOptions="Center"
+               Margin="20"/>
+        </StackLayout>
+    </ContentPage.Content>
+
+</ContentPage>
